@@ -1,0 +1,22 @@
+body {
+  font: normal 16px sans-serif;
+}
+
+button {
+  font: bold 14px sans-serif;
+  padding: 7.5px 15px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.theme-button {
+  width: 50px;
+  height: 50px;
+  bottom: 10px;
+  right: 10px;
+  position: fixed;
+  cursor: pointer;
+}
