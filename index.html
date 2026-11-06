@@ -12,10 +12,18 @@
     </p>
     <a target="_blank" rel="noopener noreferrer" href="https://bamslam1.github.io/rps"><button>Rock Paper Scissors</button></a>
     <a target="_blank" rel="noopener noreferrer" href="https://bamslam1.github.io/french"><button>FrançaisFlash</button></a>
-    <a target="_blank" rel="noopener noreferrer" href="https://bamslam1.github.io/french-early"><button>FrançaisFlash (Early)</button>
+    <a target="_blank" rel="noopener noreferrer" href="https://bamslam1.github.io/french-early"><button>FrançaisFlash (Early)</button></a>
 
-    <img onclick="isDark = !isDark; theme();" src="Images/theme.png" class="theme-button">
+    <noscript>
+      <p>
+        <strong>JavaScript is disabled.</strong> This website will function without JavaScript, but all websites that you can get redirected to require JavaScript.
+      </p>
+    </noscript>
 
-    <script src="Scripts/scripts.js" defer></script>
+    <input type="radio" name="theme-group" id="force-dark" class="theme-trigger">
+    <input type="radio" name="theme-group" id="force-light" class="theme-trigger">
+
+    <label for="force-dark" class="custom-button btn-dark btn">Switch to Dark Mode</label>
+    <label for="force-light" class="custom-button btn-light btn">Switch to Light Mode</label>
   </body>
 </html>
