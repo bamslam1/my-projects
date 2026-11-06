@@ -1,8 +1,58 @@
-body {
-  font: normal 16px sans-serif;
+:root {
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --show-light-btn: none;
+  --show-dark-btn: inline-block;
 }
 
-button {
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #121212;
+    --text-color: #ffffff;
+    --show-light-btn: inline-block;
+    --show-dark-btn: none;
+  }
+}
+
+:root:has(#force-dark:checked) {
+  --bg-color: #121212;
+  --text-color: #ffffff;
+  --show-light-btn: inline-block;
+  --show-dark-btn: none;
+}
+
+:root:has(#force-light:checked) {
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --show-light-btn: none;
+  --show-dark-btn: inline-block;
+}
+
+.theme-trigger {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.custom-button {
+  display: inline-block;
+  background-color: #0076ff;
+  cursor: pointer;
+  user-select: none;
+}
+
+.btn-dark { display: var(--show-dark-btn); }
+.btn-light { display: var(--show-light-btn); }
+
+body {
+  font: normal 16px sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button, .btn {
   font: bold 14px sans-serif;
   padding: 7.5px 15px;
   background-color: #4CAF50;
@@ -12,13 +62,10 @@ button {
   cursor: pointer;
 }
 
-.theme-button {
-  width: 50px;
-  height: 50px;
-  bottom: 10px;
-  right: 10px;
+.btn {
+  bottom: 20px;
+  right: 20px;
   position: fixed;
-  cursor: pointer;
 }
 
 .ver {
@@ -31,9 +78,18 @@ button {
 }
 
 @media (max-width: 600px) {
-  body { padding: 0 12px; }
+  body {
+    padding: 20px 20px;
+    font-size: 30px;
+  }
 
-  button {
-    padding: 10px 16px; margin: 4px 0;
+  button, .btn {
+    padding: 14px 20px;
+    margin: 18px 0;
+    font-size: 22px;
+  }
+
+  .ver {
+    font-size: 24px;
   }
 }
