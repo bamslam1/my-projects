@@ -60,6 +60,17 @@ button, .btn {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  transition: transform 0.1s;
+}
+
+button:hover, .btn:hover {
+  filter: drop-shadow(2px 3px 0 #4CAF50) brightness(1.1);
+  z-index: 9999;
+}
+
+button:active, .btn:active {
+  transform: translate(2px, 2px);
+  filter: drop-shadow(0 1px 0 #4CAF50);
 }
 
 .btn {
@@ -75,6 +86,17 @@ button, .btn {
   top: 0px;
   z-index: 9999;
   pointer-events: none;
+}
+
+#fillerBottom {
+  display: none;
+}
+@media (max-width: 650px) {
+  #fillerBottom {
+  padding: 50px;
+  position: relative;
+  display: block;
+}
 }
 
 @media (max-width: 600px) {
